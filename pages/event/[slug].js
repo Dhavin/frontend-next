@@ -4,6 +4,8 @@ import { createClient } from "next-sanity";
 import PortableText from "react-portable-text";
 import NavBar from "../../components/navbar";
 import imageUrlBuilder from "@sanity/image-url";
+import Link from "next/link";
+import Image from "next/image";
 
 const Post = ({ event }) => {
   const router = useRouter();
@@ -42,41 +44,7 @@ const Post = ({ event }) => {
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           />
 
-          <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
-
-          <meta name="theme-color" content="#5540af" />
-
-          <meta property="og:site_name" content="Atom Template" />
-
-          <meta property="og:image" content="//assets/img/social.jpg" />
-
-          <meta name="twitter:card" content="summary_large_image" />
-
-          <meta name="twitter:site" content="@tailwindmade" />
-
-          <link
-            crossorigin="crossorigin"
-            href="https://fonts.gstatic.com"
-            rel="preconnect"
-          />
-
-          <link
-            as="style"
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
-            rel="preload"
-          />
-
-          <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-          />
-
-          <link
-            href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-            rel="stylesheet"
-          />
-
-          <link
+          <Link
             crossorigin="anonymous"
             href="/assets/styles/main.min.css"
             media="screen"
@@ -111,7 +79,7 @@ const Post = ({ event }) => {
               <div
                 className="relative bg-cover bg-center bg-no-repeat py-8"
                 style={{ backgroundImage: "url(/assets/img/bg-hero.jpg)" }}
-               >
+              >
                 <div className="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to bg-cover bg-center bg-no-repeat"></div>
 
                 <div className="container relative z-30 pt-5 pb-12  sm:pt-5 sm:pb-12  lg:pt-5 mt-10lg:pb-12">
@@ -134,10 +102,9 @@ const Post = ({ event }) => {
                       </p>
                       <br></br>
                       <a
-                        href= {event.paymentLink}
+                        href={event.paymentLink}
                         type="submit"
                         className="bg-[#fcbe44] p-2 rounded px-8 hover:bg-[#ad7b16] "
-                        
                       >
                         Click Here to Register... Limited seats only
                       </a>
@@ -154,10 +121,13 @@ const Post = ({ event }) => {
                       </div>
                     </div>
                     <div className="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
-                      <img
+                      
+                      <Image
                         src="/assets/img/webinar-animate.svg"
                         alt="development icon"
-                        className="h-72 sm:h-84"
+                        layout="responsive"
+                        width={700}
+                        height={475}
                       />
                     </div>
                   </div>

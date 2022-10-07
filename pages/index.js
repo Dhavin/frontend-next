@@ -80,35 +80,7 @@ export default function Home({ activeEvents, inactiveEvents }) {
 
           <meta name="twitter:site" content="@tailwindmade" />
 
-          <link
-            crossorigin="crossorigin"
-            href="https://fonts.gstatic.com"
-            rel="preconnect"
-          />
-
-          <link
-            as="style"
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
-            rel="preload"
-          />
-
-          <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-          />
-
-          <link
-            href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-            rel="stylesheet"
-          />
-
-          <link
-            crossorigin="anonymous"
-            href="/assets/styles/main.min.css"
-            media="screen"
-            rel="stylesheet"
-          />
-
+        
           <script
             defer
             src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"
@@ -144,10 +116,12 @@ export default function Home({ activeEvents, inactiveEvents }) {
                       </div>
                     </div>
                     <div className="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
-                      <img
+                    <Image
                         src="/assets/img/webinar-animate.svg"
                         alt="development icon"
-                        className="h-72 sm:h-84"
+                        layout="responsive"
+                        width={700}
+                        height={475}
                       />
                     </div>
                   </div>
